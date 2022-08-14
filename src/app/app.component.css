@@ -1,0 +1,41 @@
+#customers {
+  font-family: sans-serif;
+  border-collapse: collapse;
+  width: 500px;
+  font-size: 14px;
+  color: #666666;
+}
+
+#customers td,
+#customers th {
+  padding-top: 14px;
+  padding-bottom: 13px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+#customers tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+#customers tr:hover {
+  background-color: #f0f6ff;
+}
+
+#customers th {
+  text-align: left;
+  background-color: #ddd;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.fa-sort-down,
+.fa-sort-up {
+  color: #0063e6;
+}
+
+.fa-sort-down:hover,
+.fa-sort-up:hover,
+.fa-sort:hover {
+  color: #0063e6;
+}

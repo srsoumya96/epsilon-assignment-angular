@@ -1,0 +1,55 @@
+<table id="customers">
+  <tr>
+    <th (click)="sortTable('name')">
+      Product Name
+      <i *ngIf="sortCondition.condition != 'name'" class="fa-solid fa-sort"></i>
+      <i
+        *ngIf="sortCondition.condition == 'name' && sortCondition.order == -1"
+        class="fa-solid fa-sort-down"
+      ></i>
+      <i
+        *ngIf="sortCondition.condition == 'name' && sortCondition.order == 1"
+        class="fa-solid fa-sort-up"
+      ></i>
+    </th>
+    <th (click)="sortTable('price')">
+      Price
+      <i
+        *ngIf="sortCondition.condition != 'price'"
+        class="fa-solid fa-sort"
+      ></i>
+      <i
+        *ngIf="sortCondition.condition == 'price' && sortCondition.order == -1"
+        class="fa-solid fa-sort-down"
+      ></i>
+      <i
+        *ngIf="sortCondition.condition == 'price' && sortCondition.order == 1"
+        class="fa-solid fa-sort-up"
+      ></i>
+    </th>
+    <th (click)="sortTable('category')">
+      Category
+      <i
+        *ngIf="sortCondition.condition != 'category'"
+        class="fa-solid fa-sort"
+      ></i>
+      <i
+        *ngIf="
+          sortCondition.condition == 'category' && sortCondition.order == -1
+        "
+        class="fa-solid fa-sort-down"
+      ></i>
+      <i
+        *ngIf="
+          sortCondition.condition == 'category' && sortCondition.order == 1
+        "
+        class="fa-solid fa-sort-up"
+      ></i>
+    </th>
+  </tr>
+  <tr *ngFor="let prod of productsList">
+    <td>{{ prod.name }}</td>
+    <td>{{ prod.price }}</td>
+    <td>{{ prod.category }}</td>
+  </tr>
+</table>
